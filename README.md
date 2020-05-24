@@ -1,29 +1,10 @@
-# Awesome Project
-![GitHub custom badge](https://img.shields.io/badge/MyApp-isAwesome-blueviolet)
+# README Generator
 
-## Table of Contents
-* [Installation](#installation)
-* [Tests](#tests)
-* [Usage](#usage)
-* [LICENSE](#license)
-* [Contributing](#contributing)
-* [Questions?](#questions?)
+> This is app asks a series of questions in order to produce a simple README file.  Users will open their terminal to answer their questions, then the program will generate the README file once completed.  Please note: if a README already exists in the project file the user is working in, this app will replace the content of that file.
 
-## Installation
-In order to install this project, run `npm i` in the terminal
+> Cloning this repo and running the app in this project folder will replace this README with a new one created by the app.
 
-## Tests
-To test this project, run `npm test′ in the terminal
-
-## Usage
-This is my awesome project.  You will be so impressed by its awesomeness
-
-## License
-This project uses the MIT license
-
-## Contributing
-Instructions for contributing:
-If you are awesome, you can contribute, too!
-
-## Questions?
-For questions, please contact the project owner, [valeriemiller5](mailto:valeriemiller5@hotmail.com).
+## Demo
+Please see the attached screenshots of a README generated with this app: <br/>
+![readme page top](demo/readme-part-1.png)
+![readme page top](demo/readme-part-2.png)
