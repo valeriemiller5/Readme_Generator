@@ -96,7 +96,13 @@ inquire
             'status': answers.licensing,
             'color': 'lightgreen'
         });
-        const myShield = `![github shield](${badge.image})`
+        let myShield;
+
+        if(answers.licensing === "Other" || answers.licensing === "No license was used") {
+            myShield = ""
+        } else {
+            myShield = `![github shield](${badge.image})`
+        }
         // Due to template literal formatting, the spacing isn't "pretty" in the code, but renders well in the README
         const response = `# ${answers.inputTitle}
 ${myShield}

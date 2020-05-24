@@ -6,5 +6,5 @@ Cloning this repo and running the app in this project folder will replace this R
 ## Demo
 Please see the attached screenshots of a README generated with this app:
 
-![screenshot #1](/demo/readme-part-1.png)
-![screenshot #1](/demo/readme-part-2.png)
+![snapshot #1](/demo/readme-part-1.png)
+![snapshot #2](/demo/readme-part-2.png)
