@@ -1,4 +1,5 @@
 const fs = require("fs");
+const urls = require( 'shields-badge-url-custom' );
 const inquire = require("inquirer");
 
 inquire
@@ -71,7 +72,7 @@ inquire
             type: "rawlist",
             name: "licensing",
             message: "Which license was used for this project?",
-            choices: ["MIT", "Apache License 2.0", "GNU", "Other", "No license was used"],
+            choices: ["MIT", "Apache", "GNU", "Other", "No license was used"],
         },
         {
             type: "input",
@@ -89,8 +90,13 @@ inquire
     ])
     .then(answers => {
         console.log(answers)
-        const myShield = "![GitHub custom badge](https://img.shields.io/badge/MyApp-isAwesome-blueviolet)";
-        
+        // const myShield = "![github shield](https://img.shields.io/badge/MyApp-isAwesome-blueviolet)";
+        const badge = urls({
+            'label': 'license',
+            'status': answers.licensing,
+            'color': 'lightgreen'
+        });
+        const myShield = `![github shield](${badge.image})`
         // Due to template literal formatting, the spacing isn't "pretty" in the code, but renders well in the README
         const response = `# ${answers.inputTitle}
 ${myShield}
@@ -107,7 +113,7 @@ ${myShield}
 In order to install this project, run \`${answers.install}\` in the terminal
 
 ## Tests
-To test this project, run \`${answers.testing}′ in the terminal
+To test this project, run \`${answers.testing}\` in the terminal
 
 ## Usage
 ${answers.projectDescription}
